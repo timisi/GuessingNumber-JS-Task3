@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESSING NUMBERS</title>
+</head>
+<body>
+<script>
+
+function numberRange(number) {
+      let numberchecker = [];
+      for (let i = 1; i <= number; i++) {
+        if (i % 2 == 0) {
+          numberchecker.push("yu");
+        } else if (i % 3 == 0) {
+          numberchecker.push("gi");
+        } else if (i % 5 == 0) {
+          numberchecker.push("oh");
+        } else if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0) {
+          numberchecker.push("yu-gi-oh");
+        } else if (i % 2 == 0 && i % 3 == 0) {
+          numberchecker.push("yu-gi");
+        } else if (i % 2 == 0 && i % 5 == 0) {
+          numberchecker.push("yu-oh");
+        } else if (i % 3 == 0 && i % 5 == 0) {
+          numberchecker.push("gi-oh");
+        }else {
+          numberchecker.push(i)
+        }
+        return numberchecker;
+    }
+}
+    numberRange(100);
+    numberRange(47);  
+</script>
+</body>
+</html>
